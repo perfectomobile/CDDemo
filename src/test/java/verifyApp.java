@@ -11,7 +11,7 @@ import com.perfectomobile.selenium.api.IMobileDevice;
 import com.perfectomobile.selenium.api.IMobileWebDriver;
 import com.perfectomobile.selenium.options.visual.text.MobileTextMatchMode;
 
-public class verifyApp {
+public class verifyApp !{
 
 
 	public String verifyApp(IMobileDevice device)
