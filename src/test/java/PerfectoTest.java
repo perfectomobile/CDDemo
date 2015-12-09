@@ -16,7 +16,7 @@ public class PerfectoTest {
 
 	public String checkFlights(IMobileDevice device)
 	{
-		String text ;
+		String text = "Pass";
 		try
 		{
 			device.open();
@@ -32,53 +32,14 @@ public class PerfectoTest {
 
 			webDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			webDriver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-			//webDriver.clean();
-			// press on the button "flight status"
 			visualDriver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 
 			visualDriver.manage().timeouts().implicitlyWait(25,TimeUnit.SECONDS);
 
 
 			visualDriver.findElement(By.linkText("Flight Status"));
-			List<WebElement> objList  = webDriver.findElements(By.xpath("//*[contains(@class,\"ui-link-inherit\")]"));
-
-			for (int i = 0 ; i <objList.size() ; i++)
-			{
-				WebElement item = objList.get(i);
-				if (item.getText().equals("Flight Status"))
-				{
-					item.click();
-					i = objList.size();
-
-				}
-
-			}
-
-			visualDriver.findElement(By.linkText("Search"));
-
-
-			// press on the button "flight number"
-			webDriver.findElement(By.xpath("(//input[@id=\"FlightNumber\"])[1]")).sendKeys("84");
-
-
-
-			// press on the button "Search"
-			visualDriver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			((IMobileWebDriver) visualDriver).manageMobile().visualOptions().textMatchOptions().setMode(MobileTextMatchMode.LAST);
-			visualDriver.findElement(By.linkText("Search"));
-
-
-			visualDriver.findElement(By.linkText("search")).click();
-
-			//webDriver.findElement(By.xpath("(//INPUT)[5]")).click();
-
-			// visual based validation - validate the text appear on the screen and can be seen by users.
-			visualDriver.findElement(By.linkText("New York/Newark"));
-
-			// object based validation - validate the text appear in the as part of the DOM structure 
-
-			text = webDriver.findElement(By.xpath("(.//div[@class='ui-block-b'])[1]")).getAttribute("text");
-			System.out.println(">>>>>>>>>>>>>>"+text);
+		
+				System.out.println(">>>>>>>>>>>>>>"+text);
 
 		}catch (Exception e)
 		{
