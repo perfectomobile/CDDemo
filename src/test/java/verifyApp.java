@@ -16,7 +16,7 @@ public class verifyApp {
 
 	public String verifyApp(IMobileDevice device)
 	{
-		String text ;
+		String text="PASS" ;
 		try
 		{
 			device.open();
