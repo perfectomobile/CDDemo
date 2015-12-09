@@ -11,10 +11,10 @@ import com.perfectomobile.selenium.api.IMobileDevice;
 import com.perfectomobile.selenium.api.IMobileWebDriver;
 import com.perfectomobile.selenium.options.visual.text.MobileTextMatchMode;
 
-public class verifyApp {
+public class verifyAppTest {
 
 
-	public String verifyApp(IMobileDevice device)
+	public String verifyAppTest(IMobileDevice device)
 	{
 		String text="PASS" ;
 		try
